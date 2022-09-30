@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-## [Exercise 1](https://)
+## [Exercise 1](/exercise-1)
     TASK: 
         []: Setup Ubuntu 20.04 on your local machine using Vagrant
 
