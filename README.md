@@ -5,12 +5,12 @@
 
 ## [Exercise 1](/exercise-1)
    **TASK:** 
-            ..* Setup Ubuntu 20.04 on your local machine using Vagrant
+    *Setup Ubuntu 20.04 on your local machine using Vagrant
 
-    **INSTRUCTION:**
-    
-        *Customize your Vagrantfile as necessary with private_network set to #dhcp
-        *Once the machine is up, run #ifconfig and share the output in your submission along with your Vagrantfile in a #folder for this exercise.
+   **INSTRUCTION:**
+
+    *Customize your Vagrantfile as necessary with private_network   set to #dhcp
+    ..* Once the machine is up, run #ifconfig and share the output in your submission along with your Vagrantfile in a #folder for this exercise.
 
 ## [Exercise 2](/exercise-2)
     **__TASK:
