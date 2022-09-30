@@ -21,7 +21,8 @@
        
    **INSTRUCTION:**
 
-        *   Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in the markdown files. 
+        *   Submit your work in a folder for this exercise in your altschool-cloud-exercises project. 
+            *   You will need to learn how to embed images in the markdown files. 
 
 
 ## [Exercise 3](/exercise-3)
@@ -33,7 +34,8 @@
     
    **INSTRUCTION:**
 
-        *   Submit the content of 
+        *   Submit The Content Of:
+
             *   etc/passwd, 
             *   etc/group, and 
             *   etc/sudoers.
@@ -47,9 +49,10 @@
    **INSTRUCTION:**
 
         *   Learn how to use the add-apt-repository command
-        *   Submit the content of 
+        *   Submit The Content Of: 
+
             *   etc/apt/sources.list and 
-            *    the output of #php -v command.
+            *   the output of #php -v command.
 
 
 ## [Exercise 5](/exercise-5)
@@ -61,10 +64,11 @@
 
    **INSTRUCTION:**
 
-        *   Submit the output.
-        *   git config -l
-        *   git remote -v
-        *   git log
+        *   Submit The Output:
+
+            *   git config -l
+            *   git remote -v
+            *   git log
 
 
 ## [Exercise 6](/exercise-6)
@@ -84,7 +88,12 @@
     
   **INSTRUCTION:**
 
-        *   Submit the content of your #script, #cronjob, and a sample of the email sent, all in the folder for this exercise.
+        *   Submit The Content Of Your: 
+
+            *   script, 
+            *   cronjob, and 
+            *   a sample of the email sent, 
+            all in the folder for this exercise.
 
 
 ## [Exercise 8](/exercise-8)
@@ -99,7 +108,11 @@
     
    **INSTRUCTION:**
 
-        *   Submit the #Ansible playbook, #the output of the systemctl status apache2 after deploying the playbook, a screenshot of the rendered page.
+        *   Submit The:
+
+            *   Ansible playbook, 
+            *   The output of the systemctl status apache2 after deploying the playbook, and
+            *   A screenshot of the rendered page.
 
 
 ## [Exercise 9](/exercise-9)
