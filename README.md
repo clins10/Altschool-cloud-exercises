@@ -1,9 +1,9 @@
-## Altschool-Cloud-Engineering-exercises
-__Documenting my cloud engineering journey at Altschool Africa
+# Altschool-Cloud-Engineering-exercises
+    Documenting my cloud engineering journey at Altschool Africa
 
 ## Table of Contents
 
-## Exercise 1
+## [Exercise 1](https://)
     TASK: 
         []: Setup Ubuntu 20.04 on your local machine using Vagrant
 
@@ -11,7 +11,7 @@ __Documenting my cloud engineering journey at Altschool Africa
         []: Customize your Vagrantfile as necessary with private_network set to #dhcp
         []: Once the machine is up, run #ifconfig and share the output in your submission along with your Vagrantfile in a #folder for this exercise.
 
-## Exercise 2
+## [Exercise 2](https://)
     TASK:
         []: Research online for 10 more linux commands aside the ones already mentioned in this module.
         []: Submit using your altschool-cloud-exercises project, explaining what each command is used for with examples of how to use use each and example screenshots of using each of them.
@@ -20,7 +20,7 @@ __Documenting my cloud engineering journey at Altschool Africa
         []: Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in the markdown files. 
 
 
-## Exercise 3
+## [Exercise 3](https://)
     TASK:
         []: Create 3 groups - Admin, Support & Engineering and  add the admin group to #sudoers.
         []: Create a user in each of the groups.
