@@ -10,8 +10,8 @@
 
    **INSTRUCTION:**
 
-     *  Customize your Vagrantfile as necessary with private_network   set to dhcp
-     *  Once the machine is up, run #ifconfig and share the output in your submission along with your Vagrantfile in a #folder for this exercise.
+     *  Customize your Vagrantfile as necessary with private_network   set to __dhcp__
+     *  Once the machine is up, run __ifconfig__ and share the output in your submission along with your Vagrantfile in a #folder for this exercise.
 
 ## [Exercise 2](/exercise-2)
    **TASK:**
@@ -21,7 +21,7 @@
        
    **INSTRUCTION:**
 
-        *Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in the markdown files. 
+        *   Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in the markdown files. 
 
 
 ## [Exercise 3](/exercise-3)
@@ -33,18 +33,23 @@
     
    **INSTRUCTION:**
 
-        Submit the content of #etc/passwd, #etc/group and #etc/sudoers.
+        *   Submit the content of 
+            *   etc/passwd, 
+            *   etc/group, and 
+            *   etc/sudoers.
 
 
 ## [Exercise 4](/exercise-4)
    **TASK:**
 
-        *   Install #PHP7.4 on your local linux machine using the #ppa:ondre/php package repo.
+        *   Install PHP7.4 on your local linux machine using the ppa:ondre/php package repo.
     
    **INSTRUCTION:**
 
         *   Learn how to use the add-apt-repository command
-        *   Submit the content of #etc/apt/sources.list and the output of #php -v command.
+        *   Submit the content of 
+            *   etc/apt/sources.list and 
+            *    the output of #php -v command.
 
 
 ## [Exercise 5](/exercise-5)
