@@ -16,4 +16,6 @@
     * "vagrant ssh" to enter into the vagrant 
     * "sudo apt update" then "sudo apt install net-tools"
     * "ifconfig"
-    
+
+      *   THE OUTPUT OF  "ifconfig"
+  ![time screenshot of "ifconfig"](/exercise-1/images/task-1.PNG)
