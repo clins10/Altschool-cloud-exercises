@@ -12,10 +12,13 @@
     * Next go to your terminal either powershell, bash or command prompt and cd into ubuntu20.04-LTS
     * In your terminal enter the command "vagrant init ubuntu/focal64" to install vagrant 
     * vagrant up
-    * vim  vagrantfile or vi vagrantfile or nano vagrantfile. enter the file and change your network configuaration to " dhcp" exit the text editor
+    * vim  vagrantfile or vi vagrantfile or nano vagrantfile. enter the file and change your network configuration to " dhcp" exit the text editor
     * "vagrant ssh" to enter into the vagrant 
     * "sudo apt update" then "sudo apt install net-tools"
     * "ifconfig"
 
       *   THE OUTPUT OF  "ifconfig"
-  ![time screenshot of "ifconfig"](/exercise-1/images/task-1.PNG)
+  ![terminal screenshot of "ifconfig"](/exercise-1/images/ifconfig.PNG)
+
+  * Vagrantfile Output *
+  ![terminal screenshot of "vagrantfile"](/exercise-1/images/vagrantfile.PNG)
