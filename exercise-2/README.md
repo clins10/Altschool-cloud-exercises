@@ -36,7 +36,7 @@
 
 ## SEARCH
 
-### 6. Find files smaller than 10MB in /home using : *find command* 
+### 6. Find files smaller than 10MB in /home using : **find** 
     Command to Run: find /home -size -10M
 ### Screenshot
 ![find Command screenshot](/exercise-2/images/find-size-less-than-10M.PNG)
