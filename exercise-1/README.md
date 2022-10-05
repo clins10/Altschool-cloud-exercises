@@ -20,5 +20,5 @@
       *   THE OUTPUT OF  "ifconfig"
   ![terminal screenshot of "ifconfig"](/exercise-1/images/ifconfig.PNG)
 
-  * Vagrantfile Output 
+  ### * Vagrantfile Output 
   ![terminal screenshot of "vagrantfile"](/exercise-1/images/vagrantfile.PNG)
