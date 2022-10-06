@@ -47,13 +47,13 @@
 # THE OUTPUTS:
 
 ## CONTENT OF */etc/passwd*
-![etc/passwd](/exercise-3/images/etc-passwd.PNG)
+![etc/passwd](/exercise-4/images/etc-passwd.PNG)
 
 
 ## CONTENT OF */etc/group*
-![etc/group](/exercise-3/images/etc-group.PNG)
+![etc/group](/exercise-4/images/etc-group.PNG)
 
 
 ## CONTENT OF */etc/sudoers*
-![etc/sudoers](/exercise-3/images/etc-sudoers.PNG)
+![etc/sudoers](/exercise-4/images/etc-sudoers.PNG)
 
