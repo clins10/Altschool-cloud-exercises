@@ -28,6 +28,21 @@
 ## [Exercise 3](/exercise-3)
    **TASK:**
    
+        *   Create 2 vagrants machines A and B on the same private network.
+        *   Create an ssh-key and log into B from A using the ssh-key.
+        
+    
+   **INSTRUCTION:**
+
+        *   Submit Your:
+
+            *   script.
+
+
+
+## [Exercise 4](/exercise-4)
+   **TASK:**
+   
         *   Create 3 groups - admin, support & engineering and  add the admin group to sudoers.
         *   Create a user in each of the groups.
         *   Generate SSH keys for the user in the admin group.
@@ -41,7 +56,8 @@
             *   /etc/sudoers.
 
 
-## [Exercise 4](/exercise-4)
+
+## [Exercise 5](/exercise-5)
    **TASK:**
 
         *   Install PHP7.4 on your local linux machine using the ppa:ondre/php package repo.
@@ -55,7 +71,7 @@
             *   the output of #php -v command.
 
 
-## [Exercise 5](/exercise-5)
+## [Exercise 6](/exercise-6)
    **TASK:**
 
         *   You already have a Github account, also setup a GitLab account if you you don't have one already.
@@ -71,7 +87,7 @@
             *   git log
 
 
-## [Exercise 6](/exercise-6)
+## [Exercise 7](/exercise-7)
    **TASK:**
 
         *   Review the CIS benchmark for ubuntu, and try to implement at least 10 of the recommendations that we made within the benchmark.
@@ -81,7 +97,7 @@
         *   N/A
 
 
-## [Exercise 7](/exercise-7)
+## [Exercise 8](/exercise-8)
    **TASK:**
 
         *   Create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then starts over for the new day.
@@ -96,7 +112,7 @@
             all in the folder for this exercise.
 
 
-## [Exercise 8](/exercise-8)
+## [Exercise 9](/exercise-9)
    **TASK:**
 
         *   Create a Ansible Playbook to setup a server with Apache.
@@ -115,7 +131,7 @@
             *   A screenshot of the rendered page.
 
 
-## [Exercise 9](/exercise-9)
+## [Exercise 10](/exercise-10)
    **TASK:**
 
         __193.16.20.35/29__
