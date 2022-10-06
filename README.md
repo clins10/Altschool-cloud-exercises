@@ -28,17 +28,17 @@
 ## [Exercise 3](/exercise-3)
    **TASK:**
    
-        *   Create 3 groups - Admin, Support & Engineering and  add the admin group to sudoers.
+        *   Create 3 groups - admin, support & engineering and  add the admin group to sudoers.
         *   Create a user in each of the groups.
-        *   Generate #SSH keys for the user in the admin group.
+        *   Generate SSH keys for the user in the admin group.
     
    **INSTRUCTION:**
 
         *   Submit The Content Of:
 
-            *   etc/passwd, 
-            *   etc/group, and 
-            *   etc/sudoers.
+            *   /etc/passwd, 
+            *   /etc/group, and 
+            *   /etc/sudoers.
 
 
 ## [Exercise 4](/exercise-4)
