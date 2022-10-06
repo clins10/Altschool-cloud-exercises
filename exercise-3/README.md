@@ -11,17 +11,17 @@
 ## 2:   Add The Admin group To  *SUDOERs*
     Command: sudo visudo /etc/sudoers
 
-        *   CHANGE  *
+        *   CHANGE  
                 %admin ALL=(ALL) ALL 
-        *   TO *
+        *   TO 
                 %admin ALL=(ALL:ALL) ALL
 
     *   NB: The Recommended way of adding a USER or GROUP to SUDOERS is:
 
             *   sudo vi -f /etc/sudoers.d/username or groupname
-            *   Now you are in the file, you can set any permission you like for the user or the group. 
+            *   Now you are in the file, you can set any permission for a group or user. 
             for example:    %support ALL=(ALL) ALL (for support group)
-                            for-a-user ALL=(ALL)
+                            user-in-a-group ALL=(ALL)  (for a user-in-a-group)
 
      
         
@@ -32,12 +32,14 @@
     Command: sudo useradd -g groupname -m username
 
 
-        #### NB: i didn't use the * useradd -a -G Admin,Support,Engineering * to a user to all the groups in shot because each group has to have a unique a user and because of group privileges(the Admin-group is added to SUDOERs) 
+        ### NB: i didn't use the * useradd -aG admin,support,engineering username * to a user to all the groups in one shot because each group has to have a unique a user and because of the group permission (the admin-group is added to SUDOERs) 
+        *       -g user in the default group
+        *       -m user in the /home
 
 ## 4:   Generate SSH keys for user in the Admin-group. 
             * switch to the user-in-the-admin-group and ssh-keygen 
     
-    Commmand:   sudo su - username-in-the-admin-group
+    Command:   sudo su - username-in-the-admin-group
                 ssh-keygen
 
 
