@@ -33,8 +33,8 @@
 
 
         ### NB: i didn't use the * useradd -aG admin,support,engineering username * to a user to all the groups in one shot because each group has to have a unique a user and because of the group permission (the admin-group is added to SUDOERs) 
-        *       -g user in the default group
-        *       -m user in the /home
+        *       -g create a user with the initial login group
+        *       -m create a user in the /home
 
 ## 4:   Generate SSH keys for user in the Admin-group. 
             * switch to the user-in-the-admin-group and ssh-keygen 
