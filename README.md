@@ -60,14 +60,14 @@
 ## [Exercise 5](/exercise-5)
    **TASK:**
 
-        *   Install PHP7.4 on your local linux machine using the ppa:ondre/php package repo.
+        *   Install PHP7.4 on your local linux machine using the ppa:ondrej/php package repo.
     
    **INSTRUCTION:**
 
         *   Learn how to use the add-apt-repository command
         *   Submit The Content Of: 
 
-            *   etc/apt/sources.list and 
+            *   /etc/apt/sources.list and 
             *   the output of #php -v command.
 
 
