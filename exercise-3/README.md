@@ -68,3 +68,12 @@
             Command: ssh vagrant@ip-address-of-servant-machine
     *   exit the master machine
 
+
+## OUTPUT OF THE ABOVE STEPS:
+
+![output](/exercise-3/images/master-servantt-log-screenshot.PNG)
+
+
+  
+
+  
