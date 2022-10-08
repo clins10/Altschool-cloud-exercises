@@ -76,7 +76,7 @@
 
         *   You already have a Github account, also setup a GitLab account if you you don't have one already.
         *   You already have a altschool-cloud-exercises project, clone the project to your local system.
-        *   Setup your name and email in Gut's config.
+        *   Setup your name and email in Git global config.
 
    **INSTRUCTION:**
 
