@@ -69,6 +69,12 @@
     *   exit the master machine
 
 
+
+## THE SCRIPT
+![script](/exercise-3/images/the-script.PNG)
+
+
+
 ## OUTPUT OF THE ABOVE STEPS:
 
 ![output](/exercise-3/images/master-servantt-log-screenshot.PNG)
