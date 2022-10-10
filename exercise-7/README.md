@@ -34,6 +34,7 @@ sudo modprobe -n -v ntfs
 #### 1.2: Configure Software Updates
 ##### 1.2.1: Ensure package manager repositories are configured (Not Scored)
 ```bash
+sudo apt-get update
 ```
 ##### 1.2.3: Ensure gpgcheck is globally activated (Scored)
 ```bash
