@@ -23,8 +23,6 @@ sudo modprobe -n -v hfs
 ```bash
 sudo modprobe -n -v hfsplus
 ```
-
-```
 ##### 1.1.8: Ensure mounting of FAT filesystems is disabled (Scored)
 ```bash
 sudo modprobe -n -v vfat
