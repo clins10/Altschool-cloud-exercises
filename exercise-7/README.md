@@ -162,7 +162,6 @@ sudo grep time-change /etc/audit/audit.rules
 ```bash
 sudo grep identity /etc/audit/audit.rules
 ```
-``
 ### 5: Access, Authentication and Authorization
 #### 5.1: Configure cron
 ##### 5.1.1: Ensure cron daemon is enabled (Scored)
