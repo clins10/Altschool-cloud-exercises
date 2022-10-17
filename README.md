@@ -125,7 +125,7 @@
    **INSTRUCTION:**
 
         *   Submit The:
-
+ 
             *   Ansible playbook, 
             *   The output of the systemctl status apache2 after deploying the playbook, and
             *   A screenshot of the rendered page.

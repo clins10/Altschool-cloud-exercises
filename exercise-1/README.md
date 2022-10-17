@@ -2,6 +2,7 @@
   **STEPS:**
 
     * download Oracle Virtual Machine virtualbox from https://www.virtualbox.org/wiki/Downloads
+    * Download and setup vagrant box on your system
 
     * follow the procedures and install it on your system.
         * please do not try installing the linux os manually by using the VM- vagrant will help us to that *

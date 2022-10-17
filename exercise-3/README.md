@@ -78,8 +78,3 @@
 ## OUTPUT OF THE ABOVE STEPS:
 
 ![output](/exercise-3/images/master-servantt-log-screenshot.PNG)
-
-
-  
-
-  
