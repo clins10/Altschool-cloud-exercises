@@ -1,5 +1,5 @@
 # Altschool-Cloud-Engineering-exercises
-    Documenting my cloud engineering journey at Altschool Africa
+## Documenting My *Cloud Engineering* journey at *Altschool Africa*
 
 ## Table of Contents
 
