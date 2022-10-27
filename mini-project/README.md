@@ -5,7 +5,7 @@
 
 
 
-**I  Carried Out This Mini Project  Using *AWS as my Cloud Provider* and *NameCheap for my Domain Name* (viatech.me)**
+**I  Carried Out This Mini Project  Using *AWS as my Cloud Provider* and *NameCheap as my Domain Name Service Provider* (viatech.me)**
 
 
 
