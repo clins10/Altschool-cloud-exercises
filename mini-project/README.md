@@ -362,7 +362,7 @@ git --version
 ### 4.8.2 Run the following commands to set up your git credentials
     *git config --global user.name "Your Name"*
     *git config --global user.email "Your Email"*
-     Example:
+## Example:
 ```bash
 git config --global user.name "Viashima"
 ```
@@ -539,10 +539,11 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```bash
 sudo vi /var/www/html/mylaravel-app/.htaccess
 ```
-**edit the .htaccess file to look like this**
-    <IfModule mod_rewrite.c>
-        RewriteEngine On
+### **edit the .htaccess file to look like this**
 
+    <IfModule mod_rewrite.c >
+
+        RewriteEngine On
 
         RewriteCond %{HTTPS} off [OR]                           # if the request is not https
         RewriteRule ^index\.php$ - [L]                          # then redirect to https
@@ -553,7 +554,7 @@ sudo vi /var/www/html/mylaravel-app/.htaccess
         RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]      #redirect http to https
         RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}             #redirect http to https
 
-    </IfModule>
+    </IfModule >
 
 **save and exit the .htaccess file**
 
