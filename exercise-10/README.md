@@ -89,11 +89,11 @@ Max Number of host = 6
 #### To get the *Broadcast IP*, the *host bits* of the *subnet value* are converted to **1s** and the *network bits* are converted to **0s**
 
 ```bash
-29              => 11111111.11111111.11111111.11111000
+29                  =>  11111111.11111111.11111111.11111000
 
-                    -----------------------------------
-new subnet value => 00000000.00000000.00000000.00000111
-                    -----------------------------------
+                        -----------------------------------
+new subnet value    =>  00000000.00000000.00000000.00000111
+                        -----------------------------------
 ```
 #### Now to get the *Broadcast IP* we'll easily perform a **logical OR** operation on the **IP address** and *new value of our subnet(29)*.
 
