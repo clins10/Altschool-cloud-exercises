@@ -95,11 +95,14 @@
 
 ### 4.1  Run the following command to set up your server name:
 
-```sudo hostnamectl set-hostname server.viatech.me --static
+```bash
+sudo hostnamectl set-hostname server.viatech.me --static
 ```
-```sudo hostnamectl set-hostname server.viatech.me --transient
+```bash
+sudo hostnamectl set-hostname server.viatech.me --transient
 ```
-```sudo hostnamectl set-hostname "Viashima's Server" --pretty
+```bash
+sudo hostnamectl set-hostname "Viashima's Server" --pretty
 ```
 
 ### 4.2 Run the following command to set up your timezone:
