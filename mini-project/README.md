@@ -93,16 +93,17 @@
 
 ## LET'S SETUP OUR SERVER NAME, HOSTNAME, AND TIMEZONE
 
-###4.1  Run the following command to set up your server name:
+### 4.1  Run the following command to set up your server name:
+
     ``` sudo hostnamectl set-hostname server.viatech.me --static ```
     ``` sudo hostnamectl set-hostname server.viatech.me --transient ```
     ``` sudo hostnamectl set-hostname "Viashima's Server" --pretty ```
 
-###4.2 Run the following command to set up your timezone:
+### 4.2 Run the following command to set up your timezone:
     ``` sudo timedatectl set-timezone Africa/Lagos ```
     ``` sudo timedatectl set-ntp true ``` # to enable ntp
 
-###4.3 Run the following command to set up your hostname:
+### 4.3 Run the following command to set up your hostname:
     ``` sudo vi /etc/hosts ```
     **NOTE: add the following line to the file**
      127.0.1.1 server.viatech.me server     # replace server.viatech.me with your hostname
@@ -115,10 +116,10 @@
 
 ## INSTALLING LAMP WITH OTHER PACKAGES AND NECESSARY DEPENDENCIES NEEDED TO DEPLOY LARAVEL ON DEBIAN 11 OS
 
-###4.1 Run the following commands to update and upgrade your system
+### 4.1 Run the following commands to update and upgrade your system
     ``` sudo apt update && sudo apt upgrade -y ```
 
-###4.2 Lets install some useful packages:
+### 4.2 Lets install some useful packages:
     ``` sudo apt install -y curl wget ufw unzip ```
 
 #####   *curl* is used to download files from the internet and provides the libcurl library.
@@ -128,33 +129,33 @@
 
 ### 4.3 INSTALLING APACHE2 WEB SERVER
 
-####Run the following commands to install *apache2* and all the required dependencies
+####    Run the following commands to install *apache2* and all the required dependencies
     ``` sudo apt install -y apache2 ```
     
-####Run the following commands to enable apache2
+####    Run the following commands to enable apache2
     ``` sudo systemctl enable apache2 ```
 
 ## 4.4 SETTING UP THE FIREWALL
 
-###4.4.1 Run the following commands to set up the firewall
+### 4.4.1 Run the following commands to set up the firewall
     ``` sudo ufw allow OpenSSH ```
     ``` sudo ufw allow http ```
     ``` sudo ufw allow https ```
     ``` sudo ufw enable ```
 
-###4.4.2 Run the following commands to check the status of the firewall
+### 4.4.2 Run the following commands to check the status of the firewall
     ``` sudo ufw status ```
 
-###4.4.3 Run the following commands to check the status of apache2
+### 4.4.3 Run the following commands to check the status of apache2
     ``` sudo systemctl status apache2 ```
 
 
 ## 4.5 INSTALLING PHP
 
-###4.5.1 Run the following commands:
-    ``` sudo apt update -y ```
-    ``` sudo apt install apt-transport-https lsb-release ca-certificates -y ```
-    ``` sudo apt install apt-transport-https gnupg2 -y ```
+### 4.5.1 Run the following commands:
+``` sudo apt update -y ```
+``` sudo apt install apt-transport-https lsb-release ca-certificates -y ```
+``` sudo apt install apt-transport-https gnupg2 -y ```
 #### Thecommand installs: apt-transport-https, gnupg2, and ca-certificates. All 3 packages are tools that help ensure you are connecting to the actual repo, not a MITM. In other words, they ensure secure access to the php repo.
 
 ###4.5.2 Run the following commands:
