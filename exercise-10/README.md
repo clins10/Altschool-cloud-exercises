@@ -8,7 +8,7 @@
 ```
 
 
-###  __WHAT IS__: 
+###  __WHAT IS THE__: 
 
     1. Network IP?
     2. Number of Hosts?
