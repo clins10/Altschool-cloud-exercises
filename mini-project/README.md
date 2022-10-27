@@ -106,12 +106,18 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 ```
 
 ### 4.2 Run the following command to set up your timezone:
-    ``` sudo timedatectl set-timezone Africa/Lagos ```
-    ``` sudo timedatectl set-ntp true ``` # to enable ntp
+```bash
+sudo timedatectl set-timezone Africa/Lagos
+```
+```bash
+sudo timedatectl set-ntp true
+```
 
 ### 4.3 Run the following command to set up your hostname:
-    ``` sudo vi /etc/hosts ```
-    **NOTE: add the following line to the file**
+```bash
+sudo vi /etc/hosts
+```
+**NOTE: add the following line to the file**
      127.0.1.1 server.viatech.me server     # replace server.viatech.me with your hostname
      18.168.174.68 server.viatech.me        # this is the elastic IP address of my EC2 instance
 
@@ -123,10 +129,14 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 ## INSTALLING LAMP WITH OTHER PACKAGES AND NECESSARY DEPENDENCIES NEEDED TO DEPLOY LARAVEL ON DEBIAN 11 OS
 
 ### 4.1 Run the following commands to update and upgrade your system
-    ``` sudo apt update && sudo apt upgrade -y ```
+```bash
+sudo apt update && sudo apt upgrade -y
+```
 
 ### 4.2 Lets install some useful packages:
-    ``` sudo apt install -y curl wget ufw unzip ```
+    ```bash
+sudo apt install -y curl wget ufw unzip
+```
 
 #####   *curl* is used to download files from the internet and provides the libcurl library.
 #####   *wget* is just a simple command line also used to download files from the internet.
@@ -136,166 +146,276 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 ### 4.3 INSTALLING APACHE2 WEB SERVER
 
 ####    Run the following commands to install *apache2* and all the required dependencies
-    ``` sudo apt install -y apache2 ```
+```bash
+sudo apt install -y apache2
+```
     
 ####    Run the following commands to enable apache2
-    ``` sudo systemctl enable apache2 ```
+```bash
+sudo systemctl enable apache2
+```
 
 ## 4.4 SETTING UP THE FIREWALL
 
 ### 4.4.1 Run the following commands to set up the firewall
-    ``` sudo ufw allow OpenSSH ```
-    ``` sudo ufw allow http ```
-    ``` sudo ufw allow https ```
-    ``` sudo ufw enable ```
+```bash
+sudo ufw allow OpenSSH
+```
+```bash
+sudo ufw allow http
+```
+```bash
+sudo ufw allow https
+```
+```bash
+sudo ufw enable
+```
 
 ### 4.4.2 Run the following commands to check the status of the firewall
-    ``` sudo ufw status ```
+```bash
+sudo ufw status
+```
 
 ### 4.4.3 Run the following commands to check the status of apache2
-    ``` sudo systemctl status apache2 ```
+```bash
+sudo systemctl status apache2
+```
 
 
 ## 4.5 INSTALLING PHP
 
 ### 4.5.1 Run the following commands:
-``` sudo apt update -y ```
-``` sudo apt install apt-transport-https lsb-release ca-certificates -y ```
-``` sudo apt install apt-transport-https gnupg2 -y ```
+```bash
+sudo apt update -y
+```
+```bash
+sudo apt install apt-transport-https lsb-release ca-certificates -y
+```
+```bash
+sudo apt install apt-transport-https gnupg2 -y
+```
 #### Thecommand installs: apt-transport-https, gnupg2, and ca-certificates. All 3 packages are tools that help ensure you are connecting to the actual repo, not a MITM. In other words, they ensure secure access to the php repo.
 
 ###4.5.2 Run the following commands:
-   ``` echo "deb https://packages.sury.org/php/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/sury-php.list ```
+```bash
+echo "deb https://packages.sury.org/php/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/sury-php.list
+```
 
 #### This command basically adds the *Sury php repo* for lsb_release to our machine’s apt sources list.
 
 ###To know the short codename for the Linux distro you are using Run:
-    ``` lsb_release -cs ```
+```bash
+lsb_release -cs
+```
 
 ###4.5.3 Run the following commands:
-    ``` wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg ```
-    ``` sudo apt update -y ```
+```bash
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+```
+```bash
+sudo apt update -y
+```
 
 #### This downloads the gpg key for php and stores them in the /etc/apt/trusted.gpg.d/php.gpg file. The gpg key is a resource of the gnupg2 we installed earlier. It basically ensures that you are getting the php package from an authentic source.
 
 ###4.5.4 Run the following commands:
-    ``` sudo apt install php8.1 php8.1-curl libapache2-mod-php php8.1-dev php8.1-bcmath php8.1-zip php8.1-mbstring php-json php8.1-mysql php8.1-gd php8.1-xml php8.1-tokenizer php-common ```
+```bash
+sudo apt install php8.1 php8.1-curl libapache2-mod-php php8.1-dev php8.1-bcmath php8.1-zip php8.1-mbstring php-json php8.1-mysql php8.1-gd php8.1-xml php8.1-tokenizer php-common
+```
 
 ####Run this command if the first didn't work
-    ```sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml ```
+```bash
+sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
+```
 
 #### This command installs PHP 8.1, Apache2 php module, PHP curl, PHP MySQL, and various other PHP extensions.
 
 ###Run the following commands to check the version of PHP installed
-    ``` php -v ``` # OR
-    ``` php --version ```
+```bash
+php -v
+```
+### OR
+```bash
+php --version
+```
 
 ## 4.6 INSTALLING COMPOSER
 
 ###CD to your root directory
-    ``` cd ~ ```
-    ``` sudo su - ```
+```bash
+cd ~ 
+```
+```bash
+sudo su -
+```
 
 ###4.6.1 Run the following commands:
-    ``` sudo curl -sS https://getcomposer.org/installer | php ```
+```bash
+sudo curl -sS https://getcomposer.org/installer | php
+```
 
 #### This command downloads the composer installer and pipes it to the php command. The php command then executes the installer.
 
 
 ###Run the following commands to move the composer.phar file to the /usr/local/bin directory
-    ``` sudo mv composer.phar /usr/local/bin/composer ```
+```bash
+sudo mv composer.phar /usr/local/bin/composer
+```
 
 ###Run the following command to make the composer.phar file executable
-    ``` sudo chmod +x /usr/local/bin/composer ```
+```bash
+sudo chmod +x /usr/local/bin/composer
+```
 
 ###Run the following command to check the version of composer installed
-    ``` composer --version ```
-    **NOTE: if you get an error, run the following command**
-    ``` sudo apt install php8.1-cli ```
-    ``` composer --version ```
+```bash
+composer --version
+```
+**NOTE: if you get an error, run the following command**
+```bash
+sudo apt install php8.1-cli
+```
+```bash
+composer --version
+```
 ###CD back to your home directory
-    ``` cd ~ ```
+```bash
+cd ~
+```
 
 ## 4.7 INSTALLING MYSQL
 
 ###4.7.1 Add the latest mysql repository to your system
-    ``` wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb ```
+```bash
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+```
 
 #### This command downloads the latest MySQL apt configuration package to your present working directory    (at the time of writing this, the latest version was 0.8.24–1). 
     The -c option ensures that the download is resumed if it was interrupted.
 
 ###4.7.2 Run the following commands:
-    ``` sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb ```
+```bash
+sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+```
 
 #### This command installs the downloaded package. The dpkg command is used to install, remove, and manage Debian packages.
 
 ####Run the following command if the dkpg command didn't work
-    ``` sudo apt install ./mysql-apt-config_0.8.24-1_all.deb ```
+```bash
+sudo apt install ./mysql-apt-config_0.8.24-1_all.deb
+```
 
 **NB: You will be prompted to select the MySQL version you want to install. Select the latest version and press Enter.**
 
 ###4.7.3 Now let's install MySQL
-    ``` sudo apt update -y ```
-    ``` sudo apt install mysql-server -y ```
+```bash
+sudo apt update -y
+```
+```bash
+sudo apt install mysql-server -y
+```
 **NB: You will be prompted to enter a password for the MySQL root user. Enter a strong password and press Enter.**
 
 ###Run the following commands to check the status of MySQL
-    ``` sudo systemctl status mysql ```
+```bash
+sudo systemctl status mysql
+```
 
 ###4.7.4 Run the following commands to secure your MySQL installation
-    ``` sudo mysql_secure_installation ```
-    **NOTE: You will be prompted to enter the current password for the root user. and other security questions**
+```bash
+sudo mysql_secure_installation
+```
+**NOTE: You will be prompted to enter the current password for the root user. and other security questions**
 
 ###Run the following commands to check the version of MySQL installed
-    ``` mysql --version ```
+```bash
+mysql --version
+```
 
 ###4.7.5 Create a database for your Laravel application
-    ``` mysql -u root -p ```
-    ``` CREATE DATABASE miniproject_db; ```
-    ``` USE miniproject_db; ```
-   `
+```bash
+mysql -u root -p
+```
+```bash
+CREATE DATABASE miniproject_db;
+```
+```bash
+USE miniproject_db;
+```
 ### this will create a database named miniproject_db, and enable it to be used.
 
 **Now we need to pull the laravel app from github so we can use it**
 
 ## 4.8 INSTALLING GIT
 ###4.8.1 Run the following commands:
-    ``` sudo apt update -y ```
-    ``` sudo apt install git -y ```
+```bash
+sudo apt update -y
+```
+```bash
+sudo apt install git -y
+```
 ###Run the following commands to check the version of git installed
-    ``` git --version ```
+```bash
+git --version
+```
 
 ###4.8.2 Run the following commands to set up your git credentials
     *git config --global user.name "Your Name"*
     *git config --global user.email "Your Email"*
      Example:
-    ``` git config --global user.name "Viashima" ```
-    ``` git config --global user.email "vnongu@gmail.com" ```
+```bash
+git config --global user.name "Viashima"
+```
+```bash
+git config --global user.email "vnongu@gmail.com"
+```
     
 
 ###4.8.3 Run the following commands to clone the laravel app project from github
-    ``` sudo git clone https://github.com/f1amy/laravel-realworld-example-app.git ```
-    ``` sudo mv laravel-realworld-example-app mylaravel-app ```
+```bash
+sudo git clone https://github.com/f1amy/laravel-realworld-example-app.git
+```
+```bash
+sudo mv laravel-realworld-example-app mylaravel-app
+```
 
 ### This will clone the laravel app from github and move it to a folder named mylaravel-app
 
 ###4.8.4 Run the following commands to install the laravel app dependencies
-    ``` cd mylaravel-app ```
-    ``` composer install ```
-    ``` cd ~ ```
+```bash
+cd mylaravel-app
+```
+```bash
+composer install
+```
+```bash
+cd ~
+```
 
 ###4.8.5 Run the following commands:
-    ``` sudo cp mylaravel-app /var/www/html ```
-    ``` cd /var/www/html/mylaravel-app ```
-    ``` sudo chown -R www-data:www-data /var/www/html/mylaravel-app ```
-    ``` sudo chmod -R 755 /var/www/html/mylaravel-app ```
+```bash
+sudo cp mylaravel-app /var/www/html
+```
+```bash
+cd /var/www/html/mylaravel-app
+```
+```bash
+sudo chown -R www-data:www-data /var/www/html/mylaravel-app
+```
+```bash
+sudo chmod -R 755 /var/www/html/mylaravel-app
+```
 
 ### This will copy the laravel app to the /var/www/html directory, change the owner of the laravel app to www-data and change the permissions of the laravel app to 755.
 
 ###Run the following commands:
-    ``` sudo cp .env.example .env ```
-    ``` sudo vi .env ```
-    **edit the .env file and change the following lines to match your credentials-datacase and IP address**
+```bash
+sudo cp .env.example .env
+```
+```bash
+sudo vi .env
+```
+**edit the .env file and change the following lines to match your credentials-datacase and IP address**
     APP_NAME="mylaravel-app"
     APP_ENV=local
     APP_KEY=
@@ -320,15 +440,23 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 **save and exit the .env file**
 
 ###Run the following commands:
-    ``` sudo php artisan key:generate ```
-    ``` sudo php artisan migrate ```
+```bash
+sudo php artisan key:generate
+```
+```bash
+sudo php artisan migrate
+```
 
 ### This will generate the application key and run the database migrations.
     
 ###Run the following commands:
-    ``` cd routes ```
-    ``` sudo vi web.php ```
-    **edit the web.php file to look exactly like this**
+```bash
+cd routes
+```
+```bash
+sudo vi web.php
+```
+**edit the web.php file to look exactly like this**
     Route::get('/', function () {
     return view('welcome');
     });
@@ -336,9 +464,13 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 **save and exit the web.php file**
 
 ###Run the following commands to edit the apache2 configuration file
-    ``` cd /etc/apache2/sites-available ```
-    ``` sudo vi mylaravel-app.conf ```
-    **edit the mylaravel-app.conf file to match your credentials**
+```bash
+cd /etc/apache2/sites-available
+```
+```bash
+sudo vi mylaravel-app.conf
+```
+**edit the mylaravel-app.conf file to match your credentials**
 
     <VirtualHost *:80>
         ServerName server.viatech.me            #change this to your server IP address
@@ -359,9 +491,15 @@ sudo hostnamectl set-hostname "Viashima's Server" --pretty
 ### This above commands will create a virtual host for your laravel app
 
 ###Run the following commands:
-    ``` sudo a2ensite mylaravel-app.conf ```
-    ``` sudo a2dissite 000-default.conf ```
-    ``` sudo systemctl restart apache2 ```
+```bash
+sudo a2ensite mylaravel-app.conf
+```
+```bash
+sudo a2dissite 000-default.conf
+```
+```bash
+sudo systemctl restart apache2
+```
 
 ### this commands will disable the default apache2 virtual host and enable the mylaravel-app virtual host
 
