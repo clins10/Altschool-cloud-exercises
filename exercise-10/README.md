@@ -27,7 +27,7 @@ Submit all your answers as a markdown file the this exercise.
 
 #### To calcualate the *Network IP* we'll first have to get the binary form of the given *IP* and its *Subnet* Here our *subnet* is **29** *up bits (1s)* and **3** *down bits (0s)* which sums up to the *32* the total allowed bits in an *IP*
 
-####    *up bits* === *network bits* designated with *1s*
+####    *up bits* ===   *Network bits* designated with *1s*
 ####    *down bits* === *Host bits* designated with *0s*
     
 ```bash
