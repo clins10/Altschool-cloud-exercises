@@ -505,7 +505,7 @@ sudo systemctl restart apache2
 
 ## if everything went well, you should be able to access your laravel app from your browser using your domain name or IP address
 
-## The laravel app degault page should look like this:
+## The laravel app default page should look like this:
 
 ![laravel app](/mini-project/images/final-output.PNG)
 
