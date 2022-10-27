@@ -503,7 +503,68 @@ sudo systemctl restart apache2
 
 ### this commands will disable the default apache2 virtual host and enable the mylaravel-app virtual host
 
-## if everything went well, you should be able to access your laravel app from your browser using your domain name or IP address
+## if everything went well, you should be able to access your laravel app from your browser using your domain name.
+
+## 5.0 INSTALLING  Let’s Encrypt SSL
+### Here we will install Certbot to install Let’sEncrypt SSL using *Snap* package manager.
+
+### Run the following commands:
+```bash
+sudo apt update -y
+```
+```bash
+sudo apt install snapd -y
+```
+```bash
+sudo snap install core
+```
+```bash
+sudo snap refresh core
+```
+### 5.1 Run the following commands to install Certbot
+
+```bash
+sudo snap install --classic certbot
+```
+### Configure Certbot to be executable as as a command.
+```bash
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+### Now we have installed Certbot to install Let’s Encrypt for our Debian 11.
+
+### Now let’s install the SSL certificate for our domain name.
+
+**NB: enable http to https redirection using .htaccess file-this ia disabled by default**
+
+```bash
+sudo vi /var/www/html/mylaravel-app/.htaccess
+```
+**edit the .htaccess file to look like this**
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+
+
+        RewriteCond %{HTTPS} off [OR]                           # if the request is not https
+        RewriteRule ^index\.php$ - [L]                          # then redirect to https
+        RewriteCond %{REQUEST_FILENAME} !-f                     # if the request is not a file
+        RewriteCond %{REQUEST_FILENAME} !-d                     # and not a directory
+        RewriteRule . /index.php [L]                            # then redirect to index.php
+
+        RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]      #redirect http to https
+        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}             #redirect http to https
+
+    </IfModule>
+
+**save and exit the .htaccess file**
+
+### Run the following commands:
+```bash 
+sudo certbot --apache --agree-tos --redirect -m vnongu@gmail.com -d viatech.me -d www.viatech.me
+```
+**change the email address to your email address and the domain name to your domain name**
+### This will install the SSL certificate for our domain name and redirect all http traffic to https.
+
+
 
 ## The laravel app default page should look like this:
 
