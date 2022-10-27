@@ -18,7 +18,7 @@
 ### **INSTRUCTION:**
 
 ```bash
-Submit all your answers as a markdown file in the for this exercise.
+Submit all your answers as a markdown file the this exercise.
 ```
 
 ## SOLUTION:
