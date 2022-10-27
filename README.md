@@ -145,3 +145,6 @@
    **INSTRUCTION:**
 
         *   Submit all your answers as a markdown file in the for this exercise.
+
+## [mini-project](/mini-project)
+
