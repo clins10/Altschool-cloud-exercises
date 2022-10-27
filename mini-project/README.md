@@ -541,7 +541,7 @@ sudo vi /var/www/html/mylaravel-app/.htaccess
 ```
 ### **edit the .htaccess file to look like this**
 
-    <IfModule mod_rewrite.c >
+    <IfModule mod_rewrite.c>
 
         RewriteEngine On
 
@@ -554,7 +554,7 @@ sudo vi /var/www/html/mylaravel-app/.htaccess
         RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]      #redirect http to https
         RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}             #redirect http to https
 
-    </IfModule >
+    </IfModule>
 
 **save and exit the .htaccess file**
 
