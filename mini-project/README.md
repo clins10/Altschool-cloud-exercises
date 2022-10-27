@@ -196,19 +196,19 @@ sudo apt install apt-transport-https gnupg2 -y
 ```
 #### Thecommand installs: apt-transport-https, gnupg2, and ca-certificates. All 3 packages are tools that help ensure you are connecting to the actual repo, not a MITM. In other words, they ensure secure access to the php repo.
 
-###4.5.2 Run the following commands:
+### 4.5.2 Run the following commands:
 ```bash
 echo "deb https://packages.sury.org/php/ $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/sury-php.list
 ```
 
 #### This command basically adds the *Sury php repo* for lsb_release to our machine’s apt sources list.
 
-###To know the short codename for the Linux distro you are using Run:
+### To know the short codename for the Linux distro you are using Run:
 ```bash
 lsb_release -cs
 ```
 
-###4.5.3 Run the following commands:
+### 4.5.3 Run the following commands:
 ```bash
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 ```
@@ -218,19 +218,19 @@ sudo apt update -y
 
 #### This downloads the gpg key for php and stores them in the /etc/apt/trusted.gpg.d/php.gpg file. The gpg key is a resource of the gnupg2 we installed earlier. It basically ensures that you are getting the php package from an authentic source.
 
-###4.5.4 Run the following commands:
+### 4.5.4 Run the following commands:
 ```bash
 sudo apt install php8.1 php8.1-curl libapache2-mod-php php8.1-dev php8.1-bcmath php8.1-zip php8.1-mbstring php-json php8.1-mysql php8.1-gd php8.1-xml php8.1-tokenizer php-common
 ```
 
-####Run this command if the first didn't work
+####    Run this command if the first didn't work
 ```bash
 sudo apt-get install php8.1 libapache2-mod-php php8.1-dev php8.1-zip php8.1-curl php8.1-mbstring php8.1-mysql php8.1-gd php8.1-xml
 ```
 
 #### This command installs PHP 8.1, Apache2 php module, PHP curl, PHP MySQL, and various other PHP extensions.
 
-###Run the following commands to check the version of PHP installed
+### Run the following commands to check the version of PHP installed
 ```bash
 php -v
 ```
@@ -241,7 +241,7 @@ php --version
 
 ## 4.6 INSTALLING COMPOSER
 
-###CD to your root directory
+### CD to your root directory
 ```bash
 cd ~ 
 ```
@@ -249,7 +249,7 @@ cd ~
 sudo su -
 ```
 
-###4.6.1 Run the following commands:
+### 4.6.1 Run the following commands:
 ```bash
 sudo curl -sS https://getcomposer.org/installer | php
 ```
@@ -257,17 +257,17 @@ sudo curl -sS https://getcomposer.org/installer | php
 #### This command downloads the composer installer and pipes it to the php command. The php command then executes the installer.
 
 
-###Run the following commands to move the composer.phar file to the /usr/local/bin directory
+### Run the following commands to move the composer.phar file to the /usr/local/bin directory
 ```bash
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-###Run the following command to make the composer.phar file executable
+### Run the following command to make the composer.phar file executable
 ```bash
 sudo chmod +x /usr/local/bin/composer
 ```
 
-###Run the following command to check the version of composer installed
+### Run the following command to check the version of composer installed
 ```bash
 composer --version
 ```
@@ -278,14 +278,14 @@ sudo apt install php8.1-cli
 ```bash
 composer --version
 ```
-###CD back to your home directory
+### CD back to your home directory
 ```bash
 cd ~
 ```
 
 ## 4.7 INSTALLING MYSQL
 
-###4.7.1 Add the latest mysql repository to your system
+### 4.7.1 Add the latest mysql repository to your system
 ```bash
 wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
 ```
@@ -293,21 +293,21 @@ wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
 #### This command downloads the latest MySQL apt configuration package to your present working directory    (at the time of writing this, the latest version was 0.8.24–1). 
     The -c option ensures that the download is resumed if it was interrupted.
 
-###4.7.2 Run the following commands:
+### 4.7.2 Run the following commands:
 ```bash
 sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
 ```
 
 #### This command installs the downloaded package. The dpkg command is used to install, remove, and manage Debian packages.
 
-####Run the following command if the dkpg command didn't work
+####    Run the following command if the dkpg command didn't work
 ```bash
 sudo apt install ./mysql-apt-config_0.8.24-1_all.deb
 ```
 
 **NB: You will be prompted to select the MySQL version you want to install. Select the latest version and press Enter.**
 
-###4.7.3 Now let's install MySQL
+### 4.7.3 Now let's install MySQL
 ```bash
 sudo apt update -y
 ```
@@ -316,23 +316,23 @@ sudo apt install mysql-server -y
 ```
 **NB: You will be prompted to enter a password for the MySQL root user. Enter a strong password and press Enter.**
 
-###Run the following commands to check the status of MySQL
+### Run the following commands to check the status of MySQL
 ```bash
 sudo systemctl status mysql
 ```
 
-###4.7.4 Run the following commands to secure your MySQL installation
+### 4.7.4 Run the following commands to secure your MySQL installation
 ```bash
 sudo mysql_secure_installation
 ```
 **NOTE: You will be prompted to enter the current password for the root user. and other security questions**
 
-###Run the following commands to check the version of MySQL installed
+### Run the following commands to check the version of MySQL installed
 ```bash
 mysql --version
 ```
 
-###4.7.5 Create a database for your Laravel application
+### 4.7.5 Create a database for your Laravel application
 ```bash
 mysql -u root -p
 ```
@@ -347,19 +347,19 @@ USE miniproject_db;
 **Now we need to pull the laravel app from github so we can use it**
 
 ## 4.8 INSTALLING GIT
-###4.8.1 Run the following commands:
+### 4.8.1 Run the following commands:
 ```bash
 sudo apt update -y
 ```
 ```bash
 sudo apt install git -y
 ```
-###Run the following commands to check the version of git installed
+### Run the following commands to check the version of git installed
 ```bash
 git --version
 ```
 
-###4.8.2 Run the following commands to set up your git credentials
+### 4.8.2 Run the following commands to set up your git credentials
     *git config --global user.name "Your Name"*
     *git config --global user.email "Your Email"*
      Example:
@@ -371,7 +371,7 @@ git config --global user.email "vnongu@gmail.com"
 ```
     
 
-###4.8.3 Run the following commands to clone the laravel app project from github
+### 4.8.3 Run the following commands to clone the laravel app project from github
 ```bash
 sudo git clone https://github.com/f1amy/laravel-realworld-example-app.git
 ```
@@ -381,7 +381,7 @@ sudo mv laravel-realworld-example-app mylaravel-app
 
 ### This will clone the laravel app from github and move it to a folder named mylaravel-app
 
-###4.8.4 Run the following commands to install the laravel app dependencies
+### 4.8.4 Run the following commands to install the laravel app dependencies
 ```bash
 cd mylaravel-app
 ```
@@ -392,7 +392,7 @@ composer install
 cd ~
 ```
 
-###4.8.5 Run the following commands:
+### 4.8.5 Run the following commands:
 ```bash
 sudo cp mylaravel-app /var/www/html
 ```
@@ -408,7 +408,7 @@ sudo chmod -R 755 /var/www/html/mylaravel-app
 
 ### This will copy the laravel app to the /var/www/html directory, change the owner of the laravel app to www-data and change the permissions of the laravel app to 755.
 
-###Run the following commands:
+### Run the following commands:
 ```bash
 sudo cp .env.example .env
 ```
@@ -439,7 +439,7 @@ sudo vi .env
     
 **save and exit the .env file**
 
-###Run the following commands:
+### Run the following commands:
 ```bash
 sudo php artisan key:generate
 ```
@@ -463,7 +463,7 @@ sudo vi web.php
 ### this will change the default laravel page to the welcome page
 **save and exit the web.php file**
 
-###Run the following commands to edit the apache2 configuration file
+### Run the following commands to edit the apache2 configuration file
 ```bash
 cd /etc/apache2/sites-available
 ```
@@ -490,7 +490,7 @@ sudo vi mylaravel-app.conf
 
 ### This above commands will create a virtual host for your laravel app
 
-###Run the following commands:
+### Run the following commands:
 ```bash
 sudo a2ensite mylaravel-app.conf
 ```
