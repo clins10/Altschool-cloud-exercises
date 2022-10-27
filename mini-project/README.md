@@ -95,9 +95,12 @@
 
 ### 4.1  Run the following command to set up your server name:
 
-    ``` sudo hostnamectl set-hostname server.viatech.me --static ```
-    ``` sudo hostnamectl set-hostname server.viatech.me --transient ```
-    ``` sudo hostnamectl set-hostname "Viashima's Server" --pretty ```
+```sudo hostnamectl set-hostname server.viatech.me --static
+```
+```sudo hostnamectl set-hostname server.viatech.me --transient
+```
+```sudo hostnamectl set-hostname "Viashima's Server" --pretty
+```
 
 ### 4.2 Run the following command to set up your timezone:
     ``` sudo timedatectl set-timezone Africa/Lagos ```
