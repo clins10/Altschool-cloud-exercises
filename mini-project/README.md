@@ -1,9 +1,24 @@
 # ALTSCHOOL AFRICA MINI PROJECT
 
+## **TASK**
+
+### We will be deploying a real life application:
+
+### **Demo Project:** https://github.com/f1amy/laravel-realworld-example-app
+
+    1.  Setup Debian 11 on a virtual machine instance with a cloud provider or as instructed
+    2.  Setup Apache with every dependency the application needs to run
+    3.  Don’t use Laravel Sail or Docker as suggested in the project README file, simple clone the project with Git and deploy with Apache
+    4.  Setup MySQL with credentials and a database for your aplication to use
+    5.  Configure a subdomain if you have a domain name to point the VM instance or speak to an instructor for further guide
+
+*You have completed the project if you are able to view the application according to the specifications in the project from your Host browser*
+
 ## INSTRUCTIONS:
+**Submit thr url link of your mini project to the shared document**
 
 
-
+# SOLUTION'S PROCEDURES:
 
 **I  Carried Out This Mini Project  Using *AWS as my Cloud Provider* and *NameCheap as my Domain Name Service Provider* (viatech.me)**
 
@@ -46,7 +61,7 @@
     *.7 Click on Associate
 
 ## STEP 2:
-    **NB: it's adviced to have a registered domain before taking this step**
+    **NB: it's advice to have a registered domain before taking this step**
 
 ##  REGISTERING YOUR DOMAIN ON AWS
 
@@ -134,7 +149,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 ### 4.2 Lets install some useful packages:
-    ```bash
+```bash
 sudo apt install -y curl wget ufw unzip
 ```
 
