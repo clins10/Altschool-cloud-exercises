@@ -2,7 +2,7 @@
 
 ## **TASK**
 
-### We will be deploying a real life application:
+### NB: You will be deploying a real life application:
 
 ### **Demo Project:** https://github.com/f1amy/laravel-realworld-example-app
 
@@ -12,7 +12,7 @@
     4.  Setup MySQL with credentials and a database for your aplication to use
     5.  Configure a subdomain if you have a domain name to point the VM instance or speak to an instructor for further guide
 
-*You have completed the project if you are able to view the application according to the specifications in the project from your Host browser*
+### NB: *You have completed the project if you are able to view the application according to the specifications in the project from your Host browser*
 
 ## INSTRUCTIONS:
 **Submit thr url link of your mini project to the shared document**
@@ -153,10 +153,10 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl wget ufw unzip
 ```
 
-#####   *curl* is used to download files from the internet and provides the libcurl library.
-#####   *wget* is just a simple command line also used to download files from the internet.
-#####   *ufw* is used to configure the firewall.
-#####   *unzip* is used to unzip files
+#####   *curl*: is used to download files from the internet and provides the libcurl library.
+#####   *wget*: is just a simple command line also used to download files from the internet.
+#####   *ufw*: is used to configure the firewall.
+#####   *unzip*: is used to unzip files
 
 ### 4.3 INSTALLING APACHE2 WEB SERVER
 
